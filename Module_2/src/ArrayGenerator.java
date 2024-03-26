@@ -17,4 +17,16 @@ public class ArrayGenerator {
         scanner.close(); // Close the scanner object
         return A;
     }
+
+     // New method to generate an array of a specific size with random digits
+     public static Integer[] generateRandomArrayOfSize(int size) {
+        Random random = new Random();
+        Integer[] A = new Integer[size];
+        for (int i = 0; i < size; i++) {
+            // Generate digits between 0 and 9
+            A[i] = random.nextInt(10);
+        }
+        return A;
+    }
+    
 }
