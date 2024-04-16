@@ -1,4 +1,6 @@
-package Sum_Recursion;
+// import Recursion.recursion_fibonacci; // Uncomment this if you have a class named recursion_fibonacci in a package named Recursion
+
+// No package declaration needed
 
 public class Main {
     public static void main(String[] args) {
