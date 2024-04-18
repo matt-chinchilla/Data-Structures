@@ -1,7 +1,17 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "C:/Program Files/Programming Libraries/JavaFX/javafx-sdk-22/lib/*.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.base.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.controls.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.fxml.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.graphics.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.media.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.swing.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx.web.jar",
+        "c:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\\javafx-swt.jar"
+    ],
+    "java.project.sourcePaths": [
+        "Recursion/BinaryTreeTraversal"
     ]
 }

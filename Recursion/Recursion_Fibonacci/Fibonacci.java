@@ -1,5 +1,3 @@
-package Recursion_Fibonacci;
-
 //package Recursion_Fibonacci;
 import java.util.Scanner;
 
@@ -8,7 +6,8 @@ public class Fibonacci {
     public static int fibonacci(int n) {
         if (n <= 1) {
             return n;
-        } else {
+        } 
+        else {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }

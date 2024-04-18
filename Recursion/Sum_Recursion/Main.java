@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Main mainInstance = new Main();
         int myFinal;
-        myFinal = mainInstance.sum(5);
+
+        myFinal = mainInstance.xpow(5,4);
         System.out.println(myFinal);
     }        
 
@@ -17,6 +18,16 @@ public class Main {
         }
         else{
             return (n * sum(n-1));
+        }
+    }
+
+    public static int xpow(int x, int n){
+        // Base Case
+        if (n == 0){
+            return 1;
+        }
+        else{
+            return (x * xpow(x, n-1));
         }
     }
 }
