@@ -22,24 +22,29 @@ public class BinaryTreeVisualization extends Application{
 
     //Draw the tree, make the class later
     Pane pane = new Pane();
-    drawTree(tree.root, pane, 400.0, 20.0, 200.0);
+    drawTree(tree.root, pane, 400.0, 20.0, 200.0, false);
 
     primaryStage.setScene(new Scene(pane, 800, 400)); // Set the scene which is the pane a.k.a. the window
     primaryStage.show();
     }
 
-    private void drawTree(Node node, Pane pane, double x, double y, double hGap) {
+    private void drawTree(Node node, Pane pane, double x, double y, double hGap, boolean isLeft) {
         if (node != null) {
-            pane.getChildren().add(new Text(x - 10, y, Integer.toString(node.data)));
-
             if (node.left != null) {
-                pane.getChildren().add(new Line(x - hGap, y + 50, x, y));
-                drawTree(node.left, pane, x - hGap, y + 50, hGap / 2);
+                pane.getChildren().add(new Line(x - hGap, y + 60, x, y));
+                drawTree(node.left, pane, x - hGap, y + 60, hGap / 2, true);
             }
-
+    
             if (node.right != null) {
-                pane.getChildren().add(new Line(x + hGap, y + 50, x, y));
-                drawTree(node.right, pane, x + hGap, y + 50, hGap / 2);
+                pane.getChildren().add(new Line(x + hGap, y + 60, x, y));
+                drawTree(node.right, pane, x + hGap, y + 60, hGap / 2, false);
+            }
+    
+            // Adjust the position of the text based on whether the node is a left child or a right child
+            if (isLeft) {
+                pane.getChildren().add(new Text(x - 20, y, Integer.toString(node.data)));
+            } else {
+                pane.getChildren().add(new Text(x + 5, y, Integer.toString(node.data)));
             }
         }
     }
