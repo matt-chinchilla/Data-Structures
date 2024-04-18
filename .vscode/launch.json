@@ -3,19 +3,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "BinaryTreeVisualization",
+            "name": "Debug (Launch)",
             "request": "launch",
             "mainClass": "BinaryTreeVisualization",
-            "projectName": "Recursion_258448b0"
-        },
-        {
-            "type": "java",
-            "name": "Launch BinaryTreeVisualization",
-            "request": "launch",
-            "mainClass": "BinaryTreeVisualization",
-            "projectName": "Recursion",
-            "vmArgs": "--module-path \"C:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics",
-            "cwd": "C:\\Users\\chiri\\Programming Projects\\Java Projects\\Recursion\\Recursion\\BinaryTreeTraversal"
+            "args": "",
+            "vmArgs": "--module-path \"C:\\Program Files\\Programming Libraries\\JavaFX\\javafx-sdk-22\\lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
