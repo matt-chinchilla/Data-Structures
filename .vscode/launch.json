@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Recursion",
+            "request": "launch",
+            "mainClass": "Recursion",
+            "projectName": "Data-Structures_3630350f"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch)",
             "request": "launch",
             "mainClass": "BinaryTreeVisualization",
