@@ -2,20 +2,37 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import java.util.Scanner;
 
 public class BinaryTreeVisualization extends Application {
+    private static int treeSize = 9; // Default size
+
+    public static void main(String[] args) {
+        // Check if there are command-line arguments for the tree size
+        if (args.length > 0) {
+            try {
+                treeSize = Integer.parseInt(args[0]);
+            } catch (NumberFormatException e) {
+                System.err.println("Invalid input. Using default size: 9");
+            }
+        } else {
+            // Prompt user for input if no command-line arguments
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter the size of the binary tree: ");
+            while (!scanner.hasNextInt()) {
+                System.out.println("Please enter a valid integer.");
+                scanner.next(); // consume the non-integer input
+            }
+            treeSize = scanner.nextInt();
+            scanner.close();
+        }
+
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) {
-        BinaryTree tree = new BinaryTree();
-        tree.root = new Node(1);
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
-        tree.root.right.left = new Node(6);
-        tree.root.right.right = new Node(7);
-        tree.root.left.left.left = new Node(8);
-        tree.root.left.left.right = new Node(9);
+        BinaryTree tree = BinaryTreeGenerator.createBinaryTree(treeSize);
 
         Pane pane = new Pane();
         TreeDrawer drawer = new TreeDrawer(pane);
@@ -23,9 +40,5 @@ public class BinaryTreeVisualization extends Application {
 
         primaryStage.setScene(new Scene(pane, 800, 400));
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
