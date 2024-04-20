@@ -24,7 +24,10 @@ public class TreeDrawer {
             }
 
             Text text = new Text(x - (isLeft ? 20 : -5), y, Integer.toString(node.data));
-            dotAdder.attachDotHandler(text, node);
+            double centerX = x;
+            double centerY = y;
+
+            dotAdder.attachDotHandler(text, node, centerX, centerY);
             pane.getChildren().add(text);
         }
     }
