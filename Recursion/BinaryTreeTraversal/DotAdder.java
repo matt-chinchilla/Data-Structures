@@ -12,6 +12,14 @@ public class DotAdder {
         this.pane = pane;
     }
 
+    public void drawDot(double x, double y) {
+        if (currentDot != null) {
+            pane.getChildren().remove(currentDot);
+        }
+        currentDot = new Circle(x, y, 5, Color.RED);
+        pane.getChildren().add(currentDot);
+    }
+
     public void attachDotHandler(Text text, Node node, double x, double y) {
         text.setOnMouseClicked(event -> {
             // Diagnostic output
